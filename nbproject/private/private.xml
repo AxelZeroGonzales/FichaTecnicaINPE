@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/DatosGenerales.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Provincias.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/SubDirectorDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/AreaTerreno.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/service/ICrudDao.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/web/index.html</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/database/AccesoDB.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Pabellones.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Instituciones.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/ProvinciaDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/service/Combo.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/SubDirector.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/DepartamentoDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Alcaide.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Penal.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/AntiguedadPenal.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/AlcaideDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/AutoridadesDirectrices.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/PersonalTratamiento.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/JefeSeguridadDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Director.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/DirectorDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/TitulacionPenal.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/database/Prueba.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/Departamentos.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/dao/EmpleadoDAO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/JefeSeguridad.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/entity/EmpleadoTO.java</file>
+            <file>file:/C:/Users/axel_/Desktop/fichaTecnicaINPE/src/java/inpe/ficha/service/DataFija.java</file>
+        </group>
+    </open-files>
+</project-private>
