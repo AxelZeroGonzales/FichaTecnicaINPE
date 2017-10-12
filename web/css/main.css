@@ -1,0 +1,38 @@
+body {
+  width: 100%;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.row{
+  max-width: 1024px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 100vh;
+}
+
+
+.framecontainer{
+  background-color: white;
+  border-radius: 4px;
+}
+
+iframe {
+  border: none;
+  padding: 12px;
+  max-width: 100%;
+}
+div#interna{
+    text-align: center;
+}
+div#externa{
+    text-align: center;
+}
+table th {
+  text-align: center;
+}
+table td {
+  text-align: center;
+}

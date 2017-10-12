@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Tomas Acuña, ...">
+    <meta name="description" content="Ficha técnica situacional de los establecimientos penitenciarios">
+    <title>Ficha técnica situacional de los establecimientos penitenciarios</title>
+    <!-- Metadatos Link -->
+    <meta property="og:title" content="Instituto Nacional Penitenciario"/>
+    <!-- <meta property="og:url" content="#" /> -->
+    <meta property="og:image" content="img/pv.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  
+  <body ng-app="todoAp">   
+    <div class="contenido col-md-12">
+      <form>
+        <!--Datos Generales del penal-->
+        <br>
+        <div class="1datosgen" id="1datosgen">
+             <h2>II Infraestructura</h2>
+          <div class="2titul">
+            <h5>2.1 Titulación de la propiedad del penal</h5>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Inscrito en Registros Públicos:</label>
+              <div class="form-check form-check-inline col-md-5 form-control-sm">
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02rgp" value="Sí"> Sí
+                </label>
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02rgp" value="No"> No
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Inscrito en Registros de SBN:</label>
+              <div class="form-check form-check-inline col-md-5 form-control-sm">
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02regsbn" value="Sí"> Sí
+                </label>
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02regsbn" value="No"> No
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Local propio</label>
+              <div class="form-check form-check-inline col-md-5 form-control-sm">
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02locp" value="Sí"> Sí
+                </label>
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02locp" value="No"> No
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Local alquilado:</label>
+              <div class="form-check form-check-inline col-md-5 form-control-sm">
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02localq" value="Sí"> Sí
+                </label>
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02localq" value="No"> No
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Por regularizar saneamiento:</label>
+              <div class="form-check form-check-inline col-md-5 form-control-sm">
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02regs" value="Sí"> Sí
+                </label>
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02regs" value="No"> No
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Comisarías:</label>
+              <div class="form-check form-check-inline col-md-5 form-control-sm">
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02comis" value="Sí"> Sí
+                </label>
+                <label class="form-check-label col-md-5">
+                  <input class="form-check-input" type="radio" name="02comis" value="No"> No
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Otros:</label>
+              <div class="form-group col-md-5">
+                <input type="text" class="form-control form-control-sm" placeholder="Especifique">
+              </div>
+            </div>
+          </div><br>
+          <div class="2area">
+            <h5>2.2 Área del terreno (Mts.²)</h5>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Área total:</label>
+              <div class="form-group col-md-5">
+                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Área construída:</label>
+              <div class="form-group col-md-5">
+                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Área por construir:</label>
+              <div class="form-group col-md-5">
+                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
+              </div>
+            </div>
+          </div><br>
+          <div class="2antig">
+            <h5>2.3 Antigüedad</h5>
+            <div class="form-row">
+              <label class="col-md-5 col-form-label text-secondary">Fecha de construcción:</label>
+              <div class="form-group col-md-5">
+                <input type="date" class="form-control form-control-sm" placeholder="Cantidad">
+              </div>
+              <label class="col-md-5 col-form-label text-secondary">Fecha de inauguración:</label>
+              <div class="form-group col-md-5">
+                <input type="date" class="form-control form-control-sm" placeholder="Cantidad">
+              </div>
+              <label class="col-md-5 col-form-label text-secondary">Fecha de funcionamiento:</label>
+              <div class="form-group col-md-5">
+                <input type="date" class="form-control form-control-sm" placeholder="Cantidad">
+              </div>
+            </div>
+          </div><br>
+          <div class="2tipconst">
+                        <h5>3.2 MATERIAL PREDOMINANTE EN LAS PAREDES DE PABELLONES</h5>                              
+                        <table border="0" ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                    <th class="col-md-2 col-form-label text-secondary">No</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Concreto</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Ladrillo</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Adove</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Qincha</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Madera</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr ng-repeat="tarea in ctrl.tareas">
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="texto" size="20" placeholder="Otros" ng-model="ctrl.textoNuevaTarea">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+      </form>      
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+  
+</html>

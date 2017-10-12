@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <title>Controladoeres</title>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="listadetareas.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="listadetareas.js"></script>
+</head>
+
+<body ng-app="todoAp">
+  <h2>Lista de Tareas</h2>
+  <div ng-controller="ControladorTareas as ctrl">
+    <span>{{restantes()}} {{tareas.length}}</span>
+    [ <a class="text-danger" href="" ng-click="ctrl.eliminar()">eliminar</a> ]
+    <ul class="unstyled">
+      <li ng-repeat="tarea in ctrl.tareas">
+        <input type="checkbox" ng-model="tarea.hecho">
+        <span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span>
+      </li>
+    </ul>
+    <form>
+      <input type="texto" size="30" placeholder="Agregar una nueva tarea" ng-model="ctrl.textoNuevaTarea">
+      <button class="btn btn-primary" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+    </form>
+  </div>
+  <div>
+    <!--<a class="btn btn-lg btn-warning" href="https://www.youtube.com/watch?v=xHpIQm1cSR0" target="_blank">-->
+	   <!-- ir al Video-Tutorial-->
+    <!--</a>-->
+  </div>
+</body>
+</html>
