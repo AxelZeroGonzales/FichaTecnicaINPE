@@ -17,16 +17,16 @@ function newSite2() {
 }
 function newSite3() {
   var iframe = document.getElementById('iframe');
-  iframe.src = "Pabellones.html";
+  iframe.src = "Infraestructura.html";
   iframe.src = iframe.src;
 }
 function newSite4() {
   var iframe = document.getElementById('iframe');
-  iframe.src = site;
+  iframe.src = "Pabellones.html";
   iframe.src = iframe.src;
 }
 function newSite5() {
   var iframe = document.getElementById('iframe');
-  iframe.src = site;
+  iframe.src = "Servicios.html";
   iframe.src = iframe.src;
 }

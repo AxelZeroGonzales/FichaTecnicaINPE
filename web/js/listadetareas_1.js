@@ -3,8 +3,7 @@
     
     var ctrl = this;
     
-  ctrl.tareas = [{texto: 'Ser Super Heroico con AngularJS', hecho: true},
-                   {texto: 'Crear una ap con angular', hecho: false}];
+  ctrl.tareas = [];
                    
   ctrl.agregarTarea = function() {
     ctrl.tareas.push({texto: ctrl.textoNuevaTarea, hecho: false});

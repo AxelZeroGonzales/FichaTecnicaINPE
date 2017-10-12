@@ -36,3 +36,7 @@ table th {
 table td {
   text-align: center;
 }
+table td:nth-child(1) {
+  text-align: left;
+}
+

@@ -3,21 +3,26 @@
   
   <head>
     <!-- Metadatos -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Tomas Acuña, ...">
-    <meta name="description" content="Ficha técnica situacional de los establecimientos penitenciarios">
-    <title>Ficha técnica situacional de los establecimientos penitenciarios</title>
-    <!-- Metadatos Link -->
-    <meta property="og:title" content="Instituto Nacional Penitenciario"/>
-    <!-- <meta property="og:url" content="#" /> -->
-    <meta property="og:image" content="img/pv.jpg" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Tomas Acuña, ...">
+        <meta name="description" content="Ficha técnica situacional de los establecimientos penitenciarios">
+        <title>Ficha técnica situacional de los establecimientos penitenciarios</title>
+        <!-- Metadatos Link -->
+        <meta property="og:title" content="Instituto Nacional Penitenciario"/>
+        <!-- <meta property="og:url" content="#" /> -->
+        <meta property="og:image" content="img/pv.jpg" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <title>Controladoeres</title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="listadetareas.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="js/listadetareas.js" type="text/javascript"></script>
+        <script src="js/listadetareas_1.js" type="text/javascript"></script>
   </head>
   
   <body ng-app="todoAp">   
@@ -27,121 +32,112 @@
         <br>
         <div class="1datosgen" id="1datosgen">
              <h2>II Infraestructura</h2>
-          <div class="2titul">
-            <h5>2.1 Titulación de la propiedad del penal</h5>
+          <div class="2tipconst">
+                        <h5>2.1 TITULACIÓN DE LA PROPIEDAD DEL PENAL.</h5>                              
+                        <table border="0" ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <thead>
+                                <tr>
+                                    <th class="col-md-1 col-form-label text-secondary" >Detalle</label</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                    <th class="col-md-2 col-form-label text-secondary">No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td ><label class="col-form-label text-secondary">Inscrito en los Registro Publicos</label></td>
+                                    <td><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                </tr
+                                <tr>
+                                    <td><label class="col-form-label text-secondary">Inscrito en los Registro de SBN</label></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                </tr>
+                                <tr>
+                                    <td><label class=" col-form-label text-secondary">Local propio</label></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                </tr>
+                                <tr>
+                                    <td><label class="col-md-1col-form-label text-secondary">Local alquilado</label></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                </tr>
+                                <tr>
+                                    <td><label class="col-form-label text-secondary">Por regularizar/Saneamiento</label></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                </tr>
+                                <tr>
+                                    <td><label class="col-form-label text-secondary">Comisarias</label></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                </tr>
+                               
+                                <tr ng-repeat="tarea in ctrl.tareas">
+                                    <td><input type="checkbox" ng-model="tarea.hecho"><label class="col-form-label text-secondary"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></label></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="false"></td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <input type="texto" size="20"  placeholder="Otro especifique" ng-model="ctrl.textoNuevaTarea">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+            <h5>2.2 ÁREA DEL TERRENO (Mts.²)</h5>
             <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Inscrito en Registros Públicos:</label>
-              <div class="form-check form-check-inline col-md-5 form-control-sm">
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02rgp" value="Sí"> Sí
-                </label>
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02rgp" value="No"> No
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Inscrito en Registros de SBN:</label>
-              <div class="form-check form-check-inline col-md-5 form-control-sm">
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02regsbn" value="Sí"> Sí
-                </label>
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02regsbn" value="No"> No
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Local propio</label>
-              <div class="form-check form-check-inline col-md-5 form-control-sm">
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02locp" value="Sí"> Sí
-                </label>
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02locp" value="No"> No
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Local alquilado:</label>
-              <div class="form-check form-check-inline col-md-5 form-control-sm">
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02localq" value="Sí"> Sí
-                </label>
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02localq" value="No"> No
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Por regularizar saneamiento:</label>
-              <div class="form-check form-check-inline col-md-5 form-control-sm">
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02regs" value="Sí"> Sí
-                </label>
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02regs" value="No"> No
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Comisarías:</label>
-              <div class="form-check form-check-inline col-md-5 form-control-sm">
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02comis" value="Sí"> Sí
-                </label>
-                <label class="form-check-label col-md-5">
-                  <input class="form-check-input" type="radio" name="02comis" value="No"> No
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Otros:</label>
-              <div class="form-group col-md-5">
-                <input type="text" class="form-control form-control-sm" placeholder="Especifique">
-              </div>
-            </div>
-          </div><br>
-          <div class="2area">
-            <h5>2.2 Área del terreno (Mts.²)</h5>
-            <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Área total:</label>
+              <label class="col-md-3 col-form-label text-secondary">Área total:</label>
               <div class="form-group col-md-5">
                 <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
               </div>
             </div>
             <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Área construída:</label>
+              <label class="col-md-3 col-form-label text-secondary">Área construída:</label>
               <div class="form-group col-md-5">
                 <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
               </div>
             </div>
             <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Área por construir:</label>
+              <label class="col-md-3 col-form-label text-secondary">Área por construir:</label>
               <div class="form-group col-md-5">
                 <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
               </div>
             </div>
           </div><br>
           <div class="2antig">
-            <h5>2.3 Antigüedad</h5>
+            <h5>2.3 ANTIGUEDAD</h5>
             <div class="form-row">
-              <label class="col-md-5 col-form-label text-secondary">Fecha de construcción:</label>
+              <label class="col-md-3 col-form-label text-secondary">Fecha de construcción</label>
               <div class="form-group col-md-5">
-                <input type="date" class="form-control form-control-sm" placeholder="Cantidad">
+                  <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
               </div>
-              <label class="col-md-5 col-form-label text-secondary">Fecha de inauguración:</label>
+            </div>
+            <div class="form-row">
+              <label class="col-md-3 col-form-label text-secondary">Fecha de inaguración</label>
               <div class="form-group col-md-5">
-                <input type="date" class="form-control form-control-sm" placeholder="Cantidad">
+                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
               </div>
-              <label class="col-md-5 col-form-label text-secondary">Fecha de funcionamiento:</label>
+            </div>
+            <div class="form-row">
+              <label class="col-md-3 col-form-label text-secondary">Fecha de funcionamiento</label>
               <div class="form-group col-md-5">
-                <input type="date" class="form-control form-control-sm" placeholder="Cantidad">
+                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
               </div>
             </div>
           </div><br>
+          
           <div class="2tipconst">
-                        <h5>3.2 MATERIAL PREDOMINANTE EN LAS PAREDES DE PABELLONES</h5>                              
+                        <h5>2.4 TIPO DE CONSTRUCCION DEL E.P.</h5>                              
                         <table border="0" ng-controller="ControladorTareas as ctrl">
                             <span>{{restantes()}} {{tareas.length}}</span>
                             <thead>
@@ -204,8 +200,417 @@
                                     <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
                                 </tr>
                                 <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
+                                    <td colspan="3">
+                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
+                                    </td>
                                     <td>
-                                        <input type="texto" size="20" placeholder="Otros" ng-model="ctrl.textoNuevaTarea">
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.5 AMBIENTES QUE TIENE EL PENAL</h5>                              
+                        <table border="0" ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                    <th class="col-md-2 col-form-label text-secondary">No</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Venusterio</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Adonisterio</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Mini clinica</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Sala de salud</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Sala para OTT</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Sala judiciales</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Sala de abogados</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Talleres/Trabajo</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Patio</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Lozas deportivas</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Aulas/enseñanza</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Cuna/jardin</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Biblioteca</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Locutorio</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Auditorio</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Cocina</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Comedor</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Ambientes especiales</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Celdas unipersonales</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Celdas bipersonales</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Dormitorios Colectivos</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr ng-repeat="tarea in ctrl.tareas">
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
+                                    <td colspan="3">
+                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.6 DORMITORIOS DEL PERSONAL</h5>                              
+                        <table border="0" ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                    <th class="col-md-2 col-form-label text-secondary">No</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Dormitorios de la INPe</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Camas disponibles</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Dormitorios de la PNP</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Camas disponibles</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr ng-repeat="tarea in ctrl.tareas">
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
+                                    <td colspan="3">
+                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.7 ROPEROS:</h5>                              
+                        <table border="0" ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                    <th class="col-md-2 col-form-label text-secondary">No</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Casilleros de metal</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Casilleros de cemento</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr ng-repeat="tarea in ctrl.tareas">
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
+                                    <td colspan="3">
+                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.8 MTERIAL DE TECHOS DEL PENAL</h5>                              
+                        <table border="0" ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                    <th class="col-md-2 col-form-label text-secondary">No</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
+                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Aligerado con concreto</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Estructurado de madera</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Caña con torta de barro</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Calamina</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Eternit</td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr ng-repeat="tarea in ctrl.tareas">
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
+                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
+                                    <td colspan="3">
+                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
                                     </td>
                                     <td>
                                         <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
