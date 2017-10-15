@@ -30,3 +30,8 @@ function newSite5() {
   iframe.src = "Servicios.html";
   iframe.src = iframe.src;
 }
+function newSite6() {
+  var iframe = document.getElementById('iframe');
+  iframe.src = "Seguridad.html";
+  iframe.src = iframe.src;
+}
