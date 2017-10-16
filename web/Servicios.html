@@ -31,7 +31,7 @@
         <br>
         <div class="contenido col-md-12">     
                 <!--Infraestructura-->
-                <h2>III SEGURIDAD</h2>
+                <h2>III SERVICIOS</h2>
                 <BR>
                 <div class="2infrastruc">           
                     <h5>3.1 AGUA:</h5>      
@@ -39,14 +39,17 @@
                         <div class="radio"  ng-controller="ControladorTareas as ctrl">
                             <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Pozo/red publica </button>
                             <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Pozo/red publica</button>
-                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareB">
-                            <label class="col-2" ng-show="formVisibility" for="CVareB">Bueno</label>
+                            <input class="col-1" ng-show="formVisibility" type="text" name="calificaicon" id="NRecibo" placeholder="N° Recibo">
+                            <input class="col-1" ng-show="formVisibility" type="number" name="calificaicon" id="Monto" placeholder="Monto">
+                            <input class="col-1" ng-show="formVisibility" type="date" name="calificaicon" id="Fecha" placeholder="Fecha">
+                            <input class="col-1" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareB">
+                            <label class="col-1" ng-show="formVisibility" for="CVareB">Bueno</label>
 
-                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareR">
-                            <label class="col-2" ng-show="formVisibility" for="CVareR">Regular</label>
+                            <input class="col-1" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareR">
+                            <label class="col-1" ng-show="formVisibility" for="CVareR">Regular</label>
 
-                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareM">
-                            <label class="col-2" ng-show="formVisibility" for="CVareM">Malo</label>
+                            <input class="col-1" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareM">
+                            <label class="col-1" ng-show="formVisibility" for="CVareM">Malo</label>
                         </div>
                         <div class="radio"  ng-controller="ControladorTareas as ctrl">
                             <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Pozo artesano</button>
@@ -121,14 +124,17 @@
                         <div class="radio"  ng-controller="ControladorTareas as ctrl">
                             <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Energia electrica</button>
                             <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Energia electrica</button>
-                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTB">
-                            <label class="col-2" ng-show="formVisibility" for="CTB">Bueno</label>
+                            <input class="col-1" ng-show="formVisibility" type="text" name="calificaicon" id="NRecibo" placeholder="N° Recibo">
+                            <input class="col-1" ng-show="formVisibility" type="number" name="calificaicon" id="Monto" placeholder="Monto">
+                            <input class="col-1" ng-show="formVisibility" type="date" name="calificaicon" id="Fecha" placeholder="Fecha">
+                            <input class="col-1" ng-show="formVisibility" type="radio" name="calificaicon" id="CTB">
+                            <label class="col-1" ng-show="formVisibility" for="CTB">Bueno</label>
 
-                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTR">
-                            <label class="col-2" ng-show="formVisibility" for="CTR">Regular</label>
+                            <input class="col-1" ng-show="formVisibility" type="radio" name="calificaicon" id="CTR">
+                            <label class="col-1" ng-show="formVisibility" for="CTR">Regular</label>
 
-                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTM">
-                            <label class="col-2" ng-show="formVisibility" for="CTM">Malo</label>
+                            <input class="col-1" ng-show="formVisibility" type="radio" name="calificaicon" id="CTM">
+                            <label class="col-1" ng-show="formVisibility" for="CTM">Malo</label>
                         </div>
                         <div class="radio"  ng-controller="ControladorTareas as ctrl">
                             <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Grupo electrogeno</button>

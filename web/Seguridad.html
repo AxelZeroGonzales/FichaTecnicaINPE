@@ -29,51 +29,42 @@
     <body ng-app="todoAp">
 
         <br>
-        <div class="contenido col-md-12">
-            <form>      
+        <div class="contenido col-md-12">     
                 <!--Infraestructura-->
-                <div class="2infrastruc">
-                    <h2>IV SEGURIDAD</h2>
-                    
-                    <div class="2tipconst">
-                        <h5>5.1 SEGURIDAD PERIMETRAL</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Cantidad</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Altura Muro perimetrico Mtr</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Ancho Mtr</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input" ></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
+                <h2>IV SEGURIDAD</h2>
+                <BR>
+                <div class="2infrastruc">           
+                    <h5>4.1 SEGURIDAD PERIMETRAL:</h5>      
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Altura Muro perimetrico Mtr.</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Altura Muro perimetrico Mtr.</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="Cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareB">
+                            <label class="col-2" ng-show="formVisibility" for="CVareB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareR">
+                            <label class="col-2" ng-show="formVisibility" for="CVareR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareM">
+                            <label class="col-2" ng-show="formVisibility" for="CVareM">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Ancho Mtrs.</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Ancho Mtrs.</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="Cantidad1">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LVareB">
+                            <label class="col-2" ng-show="formVisibility" for="LVareB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LVareR">
+                            <label class="col-2" ng-show="formVisibility" for="LVareR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LVareM">
+                            <label class="col-2" ng-show="formVisibility" for="LVareM">Malo</label>
+                        </div>
+                    </form>
+                </div><br>
+                <div class="2tipconst">
                         <h5>5.2 ARMAMENTO</h5>                              
                         <table border="0" ng-controller="ControladorTareas as ctrl">
                             <span>{{restantes()}} {{tareas.length}}</span>
@@ -118,65 +109,58 @@
                             </tbody>
                         </table>
                     </div><br>
-                    <div class="2tipconst">
-                        <h5>5.3 MUNICIONES</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Calibre</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Cantidad</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Operativo</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Inoperativo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">12 Gauge</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">9 mm. Corto</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">.223</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Cal 37</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
+                <div class="2tipconst">
+                    <h5>4.3 MUNICIONES:</h5>                              
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">12 Gauge</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">12 Gauge</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTB">
+                            <label class="col-2" ng-show="formVisibility" for="CTB">Operativo</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTR">
+                            <label class="col-2" ng-show="formVisibility" for="CTR">Inoperativo</label>
+
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">9 mm. Corto</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">9 mm. Corto</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="cantidad1">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="CcPareB">
+                            <label class="col-2" ng-show="formVisibility" for="CcPareB">Operativo</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="CcPareR">
+                            <label class="col-2" ng-show="formVisibility" for="CcPareR">Inoperativo</label>
+
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">223</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">223</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="cantidad2">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="CAdoB">
+                            <label class="col-2" ng-show="formVisibility" for="CAdoB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="CAdoR">
+                            <label class="col-2" ng-show="formVisibility" for="CAdoR">Regular</label>
+
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Cal 37</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Cal 37</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="CQdoB">
+                            <label class="col-2" ng-show="formVisibility" for="CQdoB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="CQdoR">
+                            <label class="col-2" ng-show="formVisibility" for="CQdoR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="CQdoM">
+                            <label class="col-2" ng-show="formVisibility" for="CQdoM">Malo</label>
+                        </div>
+                    </form>
+                </div><br>
+                <div class="2tipconst">
                         <h5>5.4 GRANADAS</h5>                              
                         <table border="0" ng-controller="ControladorTareas as ctrl">
                             <span>{{restantes()}} {{tareas.length}}</span>
@@ -204,206 +188,373 @@
                                     <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
                                     <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
                                 </tr>  
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="number" class="form-check-input" placeholder="Cantidad"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est"value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div><br>
-                    <div class="2tipconst">
-                        <h5>4.5 DUCHAS</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Peronal INPE masculino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Personal INPE femenino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Personal PNP femenino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Personal PNP masculino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Internos masculino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Internos femenino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
-                        <h5>4.6 SERVICIOS HIGENICOS</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Peronal INPE masculino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Personal INPE femenino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Personal PNP femenino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Personal PNP masculino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Internos masculino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Internos femenino</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    
-                    
-                </div><br><br>
-                
-    </form>      
-</div>
+                <div class="2tipconst">
+                    <h5>4.5 COMUNICAIÓN</h5>                              
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Radio Base</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Radio Base</button>
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Marca" placeholder="Marca">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Modelo"placeholder="Modelo">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Frecuencia"placeholder="Frecuencia">
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Radio Portatil</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Radio Portatil</button>
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Marca" placeholder="Marca">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Modelo"placeholder="Modelo">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Frecuencia"placeholder="Frecuencia">
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Telefono</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Telefono</button>
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Marca" placeholder="Marca">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Modelo"placeholder="Modelo">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Frecuencia"placeholder="Frecuencia">
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Celular</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Celular</button>
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Marca" placeholder="Marca">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Modelo"placeholder="Modelo">
+
+                            <input class="col-2" ng-show="formVisibility" type="text" name="sexo" id="Frecuencia"placeholder="Frecuencia">
+                        </div>
+                    </form>
+                </div><br>
+                <div class="2tipconst">
+                    <h5>4.6 TRANSPORTE</h5>                              
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Auto</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Auto</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="PMasculinoB">
+                            <label class="col-2" ng-show="formVisibility" for="PMasculinoB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="PMasculinoR">
+                            <label class="col-2" ng-show="formVisibility" for="PMasculinoR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="PMasculinoM">
+                            <label class="col-2" ng-show="formVisibility" for="PMasculinoM">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Camioneta</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Camioneta</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoB">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoR">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoM">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoM">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Multiuso</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Multiuso</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFB">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFR">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFM">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFM">Malo</label>
+                        </div>  
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Camion</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Camion</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMB">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMR">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMM">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMM">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Omnibus</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Omnibus</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMB">
+                            <label class="col-2" ng-show="formVisibility" for="INMB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMR">
+                            <label class="col-2" ng-show="formVisibility" for="INMR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMM">
+                            <label class="col-2" ng-show="formVisibility" for="INMM">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Moto</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Moto</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFB">
+                            <label class="col-2" ng-show="formVisibility" for="INFB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFR">
+                            <label class="col-2" ng-show="formVisibility" for="INFR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFM">
+                            <label class="col-2" ng-show="formVisibility" for="INFM">Malo</label>
+                        </div> 
+                    </form>
+                </div><br> 
+                <div class="2tipconst">
+                    <h5>4.7 EQUIPOS DE SEGURIDAD :</h5>                              
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Chalecos Antibalas</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Chalecos Antibalas</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="Cantidad" placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="PMasculinoB1">
+                            <label class="col-2" ng-show="formVisibility" for="PMasculinoB1">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="PMasculinoR1">
+                            <label class="col-2" ng-show="formVisibility" for="PMasculinoR1">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="PMasculinoM1">
+                            <label class="col-2" ng-show="formVisibility" for="PMasculinoM1">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Personal INPE Femenino</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Personal INPE Femenino</button>
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoB1">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoB1">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoR1">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoR1">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoM1">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoM1">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Personal PNP Femenino</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Personal PNP Femenino</button>
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFB1">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFB1">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFR1">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFR1">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFM1">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFM1">Malo</label>
+                        </div>  
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Personal PNP  Masculino</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Personal PNP Masculino</button>
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMB1">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMB1">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMR1">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMR1">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMM1">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMM1">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">interno Masculino</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">interno Masculino</button>
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMB1">
+                            <label class="col-2" ng-show="formVisibility" for="INMB1">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMR1">
+                            <label class="col-2" ng-show="formVisibility" for="INMR1">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMM1">
+                            <label class="col-2" ng-show="formVisibility" for="INMM1">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Interno Femenino</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Interno Femenino</button>
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFB1">
+                            <label class="col-2" ng-show="formVisibility" for="INFB1">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFR1">
+                            <label class="col-2" ng-show="formVisibility" for="INFR1">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFM1">
+                            <label class="col-2" ng-show="formVisibility" for="INFM1">Malo</label>
+                        </div> 
+                    </form>
+                </div><br> 
+                <div class="2tipconst">
+                    <h5>4.8 SEGURIDAD TECNOLÓGICA</h5>                              
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Bloqueadores de Celulares</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Bloqueadores de Celulares<</button>
+                            
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="Todos"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="id">
+                            <label class="col-2" ng-show="formVisibility" for="id">Operativo</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="diferentes">
+                            <label class="col-2" ng-show="formVisibility" for="diferentes">Inoperativo</label>
+
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Camioneta</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Camioneta</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoB">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoR">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoM">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoM">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Multiuso</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Multiuso</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFB">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFR">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFM">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFM">Malo</label>
+                        </div>  
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Camion</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Camion</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMB">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMR">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMM">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMM">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Omnibus</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Omnibus</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMB">
+                            <label class="col-2" ng-show="formVisibility" for="INMB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMR">
+                            <label class="col-2" ng-show="formVisibility" for="INMR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMM">
+                            <label class="col-2" ng-show="formVisibility" for="INMM">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Moto</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Moto</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFB">
+                            <label class="col-2" ng-show="formVisibility" for="INFB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFR">
+                            <label class="col-2" ng-show="formVisibility" for="INFR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFM">
+                            <label class="col-2" ng-show="formVisibility" for="INFM">Malo</label>
+                        </div> 
+                    </form>
+                </div><br>
+                <div class="2tipconst">
+                    <h5>4.9 DOCUMENTACIÓN DE SEGURIDAD</h5>                              
+                    <form  class="formulario">
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Estudio de Seguridad</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Estudio de Seguridad</button>
+                            <input class="col-1" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="N° de Documento">
+                            <input class="col-1" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="Año">
+                            <input class="file-loading col-1" ng-show="formVisibility" type="file" name="calificaicon" id="PMasculinoB1"placeholder="Subir Archivo">
+                            
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Camioneta</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Camioneta</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoB">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoR">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="PFemeninoM">
+                            <label class="col-2" ng-show="formVisibility" for="PFemeninoM">Malo</label>
+                        </div>
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Multiuso</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Multiuso</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFB">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFR">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="PNPFM">
+                            <label class="col-2" ng-show="formVisibility" for="PNPFM">Malo</label>
+                        </div>  
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Camion</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Camion</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMB">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMR">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="PNPMM">
+                            <label class="col-2" ng-show="formVisibility" for="PNPMM">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Omnibus</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Omnibus</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMB">
+                            <label class="col-2" ng-show="formVisibility" for="INMB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMR">
+                            <label class="col-2" ng-show="formVisibility" for="INMR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="INMM">
+                            <label class="col-2" ng-show="formVisibility" for="INMM">Malo</label>
+                        </div> 
+                        <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                            <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Moto</button>
+                            <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Moto</button>
+                            <input class="col-2" ng-show="formVisibility" type="number" name="calificaicon" id="PMasculinoB1"placeholder="cantidad">
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFB">
+                            <label class="col-2" ng-show="formVisibility" for="INFB">Bueno</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFR">
+                            <label class="col-2" ng-show="formVisibility" for="INFR">Regular</label>
+
+                            <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon5" id="INFM">
+                            <label class="col-2" ng-show="formVisibility" for="INFM">Malo</label>
+                        </div> 
+                    </form>
+                </div><br> <br>
+        </div>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
