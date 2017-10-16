@@ -70,3 +70,13 @@ table td {
       background: #FF851B;
       border-radius: 2px;
       color: #fff; }
+    .formulario input[type="file"]{
+        content: "";
+      display: inline-block;
+      width: 300px;
+      height: 30px;
+      position: absolute;
+      left: 600px;
+      color: #fff
+        
+    }
