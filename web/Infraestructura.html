@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <!-- Metadatos -->
+
+    <head>
+        <!-- Metadatos -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Tomas Acuña, ...">
         <meta name="description" content="Ficha técnica situacional de los establecimientos penitenciarios">
         <title>Ficha técnica situacional de los establecimientos penitenciarios</title>
         <!-- Metadatos Link -->
@@ -14,622 +13,487 @@
         <meta property="og:image" content="img/pv.jpg" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link href="css/estilos_1.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min_1.css" rel="stylesheet" type="text/css"/>
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
-        <title>Controladoeres</title>
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="listadetareas.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <script src="js/listadetareas.js" type="text/javascript"></script>
-  </head>
-  
-  <body ng-app="todoAp">   
-    <div class="contenido col-md-12">
-      <form>
-        <!--Datos Generales del penal-->
-        <br>
-        <div class="1datosgen" id="1datosgen">
-             <h2>II Infraestructura</h2>
-          <div class="2tipconst">
-                        <h5>2.1 TITULACIÓN DE LA PROPIEDAD DEL PENAL.</h5>                              
-                        <table class="table table-bordered" ng-controller="ControladorTareas as ctrl" >
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-1 col-form-label text-secondary" >Detalle</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td ><label class="col-form-label text-secondary">Inscrito en los Registro Publicos</label></td>
-                                    <td><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                </tr
-                                <tr>
-                                    <td><label class="col-form-label text-secondary">Inscrito en los Registro de SBN</label></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                </tr>
-                                <tr>
-                                    <td><label class=" col-form-label text-secondary">Local propio</label></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                </tr>
-                                <tr>
-                                    <td><label class="col-md-1col-form-label text-secondary">Local alquilado</label></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                </tr>
-                                <tr>
-                                    <td><label class="col-form-label text-secondary">Por regularizar/Saneamiento</label></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                </tr>
-                                <tr>
-                                    <td><label class="col-form-label text-secondary">Comisarias</label></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                </tr>
-                               
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td><input type="checkbox" ng-model="tarea.hecho"><label class="col-form-label text-secondary"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></label></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="false"></td>
-                                </tr>
-                                <tr>
-                                    <td >
-                                        <input type="texto" size="20"  placeholder="Otro especifique" ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-            <h5>2.2 ÁREA DEL TERRENO (Mts.²)</h5>
-            <div class="form-row">
-              <label class="col-md-3 col-form-label text-secondary">Área total:</label>
-              <div class="form-group col-md-5">
-                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-3 col-form-label text-secondary">Área construída:</label>
-              <div class="form-group col-md-5">
-                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-3 col-form-label text-secondary">Área por construir:</label>
-              <div class="form-group col-md-5">
-                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
-              </div>
-            </div>
-          </div><br>
-          <div class="2antig">
-            <h5>2.3 ANTIGUEDAD</h5>
-            <div class="form-row">
-              <label class="col-md-3 col-form-label text-secondary">Fecha de construcción</label>
-              <div class="form-group col-md-5">
-                  <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-3 col-form-label text-secondary">Fecha de inaguración</label>
-              <div class="form-group col-md-5">
-                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
-              </div>
-            </div>
-            <div class="form-row">
-              <label class="col-md-3 col-form-label text-secondary">Fecha de funcionamiento</label>
-              <div class="form-group col-md-5">
-                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
-              </div>
-            </div>
-          </div><br>
-          
-          <div class="2tipconst">
-                        <h5>2.4 TIPO DE CONSTRUCCION DEL E.P.</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Concreto</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Ladrillo</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Adove</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Qincha</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Madera</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
-                        <h5>2.5 AMBIENTES QUE TIENE EL PENAL</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Venusterio</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Adonisterio</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Mini clinica</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Sala de salud</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Sala para OTT</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Sala judiciales</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Sala de abogados</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Talleres/Trabajo</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Patio</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Lozas deportivas</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Aulas/enseñanza</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Cuna/jardin</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Biblioteca</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Locutorio</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Auditorio</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Cocina</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Comedor</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Ambientes especiales</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Celdas unipersonales</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Celdas bipersonales</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Dormitorios Colectivos</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
-                        <h5>2.6 DORMITORIOS DEL PERSONAL</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Dormitorios de la INPe</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Camas disponibles</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Dormitorios de la PNP</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Camas disponibles</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
-                        <h5>2.7 ROPEROS:</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Casilleros de metal</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Casilleros de cemento</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-                    <div class="2tipconst">
-                        <h5>2.8 MTERIAL DE TECHOS DEL PENAL</h5>                              
-                        <table border="0" ng-controller="ControladorTareas as ctrl">
-                            <span>{{restantes()}} {{tareas.length}}</span>
-                            <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Aligerado con concreto</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Estructurado de madera</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Caña con torta de barro</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Calamina</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Eternit</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Otros</td>
-                                    <td colspan="3">
-                                        <input type="texto" size="60"  ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br>
-      </form>      
-    </div>
+    </head>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
-  
-</html>
+    <body ng-app="todoAp">   
+        <div class="contenido col-md-12">
+            <form>
+                <!--Datos Generales del penal-->
+                <br>
+                <h2>II Infraestructura</h2>
+                <div class="2infrastruc">
+                    <div class="2pabe">
+                        <h4>2.1 PABELLONES</h4>
+                        <div ng-controller="ControladorTareas as ctrl">
+                            <span>{{restantes()}} {{tareas.length}}</span>
+                            <ul class="unstyled">
+                                <ul class="unstyled">
+                                    <ul class="unstyled">
+
+                                        <div class="form-row" >       
+                                            <div class="form-group col-md-3">
+                                                <label class="form-control form-control-sm" type="text" name="quantity" min="0" " placeholder="Pabellon">Pabellon 1</label>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control form-control-sm" type="number" name="quantity" min="0" placeholder="Cantidad">
+                                            </div>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="form-row" >       
+                                            <div class="form-group col-md-3">
+                                                <label class="form-control form-control-sm" type="text" name="quantity" min="0" " placeholder="Pabellon">Pabellon 2</label>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control form-control-sm" type="number" name="quantity" min="0" placeholder="Cantidad">
+                                            </div>
+                                            <br>
+                                            <br>
+                                        </div>
+
+                                        <form>
+                                            <div class="form-row">     
+                                                <ul class="unstyled"><ul class="unstyled"><ul class="unstyled">                                              
+                                                            <div class="form-group col-md-2">
+                                                                <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                                            </div>
+                                                        </ul></ul></ul>
+                                                <ul class="unstyled"><ul class="unstyled"><ul class="unstyled"><ul class="unstyled"><ul class="unstyled">
+                                                                    <div class="form-group col-md-2">
+                                                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                                                </ul></ul></ul></ul></ul>
+                                            </div>
+                                            </div>
+                                        </form>
+                                    </ul>
+                                </ul>        
+                            </ul>
+                        </div>
+
+                    </div><br>
+                    <div class="1datosgen" id="1datosgen">
+
+                        <div class="2tipconst">
+                            <h4>2.2 TITULACIÓN DE LA PROPIEDAD DEL PENAL.</h4>                              
+                            <table class="table table-bordered" ng-controller="ControladorTareas as ctrl" >
+                                <span>{{restantes()}} {{tareas.length}}</span>
+                                <thead>
+                                    <tr>
+                                        <th class="col-md-1 col-form-label text-secondary" >Detalle</label</th>
+                                        <th class="col-md-2 col-form-label text-secondary">Si</th>
+                                        <th class="col-md-2 col-form-label text-secondary">No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td ><label class="col-form-label text-secondary">Inscrito en los Registro Publicos</label></td>
+                                        <td><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    </tr
+                                    <tr>
+                                        <td><label class="col-form-label text-secondary">Inscrito en los Registro de SBN</label></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class=" col-form-label text-secondary">Local propio</label></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="col-md-1col-form-label text-secondary">Local alquilado</label></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="col-form-label text-secondary">Por regularizar/Saneamiento</label></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="col-form-label text-secondary">Comisarias</label></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
+                                    </tr>
+
+                                    <tr ng-repeat="tarea in ctrl.tareas">
+                                        <td><input type="checkbox" ng-model="tarea.hecho"><label class="col-form-label text-secondary"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></label></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
+                                        <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="false"></td>
+                                    </tr>
+                                    <tr>
+                                        <td >
+                                            <input type="texto" size="20"  placeholder="Otro especifique" ng-model="ctrl.textoNuevaTarea">
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><br>
+                        <h5>2.3 ÁREA DEL TERRENO (Mts.²)</h5>
+                        <div class="form-row">
+                            <label class="col-md-3 col-form-label text-secondary">Área total:</label>
+                            <div class="form-group col-md-5">
+                                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="col-md-3 col-form-label text-secondary">Área construída:</label>
+                            <div class="form-group col-md-5">
+                                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="col-md-3 col-form-label text-secondary">Área por construir:</label>
+                            <div class="form-group col-md-5">
+                                <input type="number" name="quantity" min="0" class="form-control form-control-sm" placeholder="Cantidad">
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="2antig">
+                        <h5>2.4 ANTIGUEDAD</h5>
+                        <div class="form-row">
+                            <label class="col-md-3 col-form-label text-secondary">Fecha de construcción</label>
+                            <div class="form-group col-md-5">
+                                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="col-md-3 col-form-label text-secondary">Fecha de inaguración</label>
+                            <div class="form-group col-md-5">
+                                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="col-md-3 col-form-label text-secondary">Fecha de funcionamiento</label>
+                            <div class="form-group col-md-5">
+                                <input type="date" name="quantity" min="0" class="form-control form-control-sm" placeholder="dd/mm/aa">
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div class="2tipconst">
+                        <h5>2.5 TIPO DE CONSTRUCCION DEL E.P.</h5>                              
+                        <form  class="formulario">
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Concreto</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Concreto</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo" id="hombre">
+                                <label class="col-2" ng-show="formVisibility" for="hombre">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo" id="mujer">
+                                <label class="col-2" ng-show="formVisibility" for="mujer">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo" id="alien">
+                                <label class="col-2" ng-show="formVisibility" for="alien">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Ladrillo</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Ladrillo</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo1" id="hombre1">
+                                <label class="col-2" ng-show="formVisibility" for="hombre1">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo1" id="mujer1">
+                                <label class="col-2" ng-show="formVisibility" for="mujer1">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo1" id="alien1">
+                                <label class="col-2" ng-show="formVisibility" for="alien1">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Adove</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Adove</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo2" id="hombre2">
+                                <label class="col-2" ng-show="formVisibility" for="hombre2">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo2" id="mujer2">
+                                <label class="col-2" ng-show="formVisibility" for="mujer2">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo2" id="alien2">
+                                <label class="col-2" ng-show="formVisibility" for="alien2">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Quincha</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Quincha</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo3" id="hombre3">
+                                <label class="col-2" ng-show="formVisibility" for="hombre3">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo3" id="mujer3">
+                                <label class="col-2" ng-show="formVisibility" for="mujer3">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo3" id="alien3">
+                                <label class="col-2" ng-show="formVisibility" for="alien3">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Madera</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Madera</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo4" id="hombre4">
+                                <label class="col-2" ng-show="formVisibility" for="hombre4">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo4" id="mujer4">
+                                <label class="col-2" ng-show="formVisibility" for="mujer4">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo4" id="alien4">
+                                <label class="col-2" ng-show="formVisibility" for="alien4">Malo</label>
+                            </div>
+                        </form>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.6 MATERIAL PREDOMINANTE EN LAS PAREDES DE PABELLONES</h5>                              
+                        <form  class="formulario">
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Concreto</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Concreto</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CPareB">
+                                <label class="col-2" ng-show="formVisibility" for="CPareB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CPareR">
+                                <label class="col-2" ng-show="formVisibility" for="CPareR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CPareM">
+                                <label class="col-2" ng-show="formVisibility" for="CPareM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">ladrillo</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Ladrillo</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LPareB">
+                                <label class="col-2" ng-show="formVisibility" for="LPareB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LPareR">
+                                <label class="col-2" ng-show="formVisibility" for="LPareR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LPareM">
+                                <label class="col-2" ng-show="formVisibility" for="LPareM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Adove</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Adove</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="LAdoB">
+                                <label class="col-2" ng-show="formVisibility" for="LAdoB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="LAdoR">
+                                <label class="col-2" ng-show="formVisibility" for="LAdoR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="LAdoM">
+                                <label class="col-2" ng-show="formVisibility" for="LAdoM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Quincha</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Quincha</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="LQdoB">
+                                <label class="col-2" ng-show="formVisibility" for="LQdoB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="LQdoR">
+                                <label class="col-2" ng-show="formVisibility" for="LQdoR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="LQdoM">
+                                <label class="col-2" ng-show="formVisibility" for="LQdoM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Madera</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Madera</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="MQdoB">
+                                <label class="col-2" ng-show="formVisibility" for="MQdoB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="MQdoR">
+                                <label class="col-2" ng-show="formVisibility" for="MQdoR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="MQoM">
+                                <label class="col-2" ng-show="formVisibility" for="MQdoM">Malo</label>
+                            </div>
+                        </form>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.7 MATERIAL PREDOMINANTE EN LOS TECHOS DE PABELLONES</h5>                              
+                        <form  class="formulario">
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Aligerado con concreto</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Aligerado con concreto</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTB">
+                                <label class="col-2" ng-show="formVisibility" for="CTB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTR">
+                                <label class="col-2" ng-show="formVisibility" for="CTR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CTM">
+                                <label class="col-2" ng-show="formVisibility" for="CTM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Estructura de madera</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Estructura de madera</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="CcPareB">
+                                <label class="col-2" ng-show="formVisibility" for="CcPareB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="CcPareR">
+                                <label class="col-2" ng-show="formVisibility" for="CcPareR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="CcPareM">
+                                <label class="col-2" ng-show="formVisibility" for="CcPareM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Caña con torta de barro</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Caña con torta de barro</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="CAdoB">
+                                <label class="col-2" ng-show="formVisibility" for="CAdoB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="CAdoR">
+                                <label class="col-2" ng-show="formVisibility" for="CAdoR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="CAdoM">
+                                <label class="col-2" ng-show="formVisibility" for="CAdoM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Calamina</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Calamina</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="CQdoB">
+                                <label class="col-2" ng-show="formVisibility" for="CQdoB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="CQdoR">
+                                <label class="col-2" ng-show="formVisibility" for="CQdoR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon3" id="CQdoM">
+                                <label class="col-2" ng-show="formVisibility" for="CQdoM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Eternit</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Eternit</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="Eternit">
+                                <label class="col-2" ng-show="formVisibility" for="Eternit">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="Eternit2">
+                                <label class="col-2" ng-show="formVisibility" for="Eternit2">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon4" id="Eternit3">
+                                <label class="col-2" ng-show="formVisibility" for="Eternit3">Malo</label>
+                            </div>
+                        </form>
+                    </div><br>
+                     <div class="2tipconst">
+                        <h5>2.5 TIPO DE CONSTRUCCION DEL E.P.</h5>                              
+                        <form  class="formulario">
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Concreto</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Concreto</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo" id="hombre">
+                                <label class="col-2" ng-show="formVisibility" for="hombre">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo" id="mujer">
+                                <label class="col-2" ng-show="formVisibility" for="mujer">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo" id="alien">
+                                <label class="col-2" ng-show="formVisibility" for="alien">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Ladrillo</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Ladrillo</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo1" id="hombre1">
+                                <label class="col-2" ng-show="formVisibility" for="hombre1">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo1" id="mujer1">
+                                <label class="col-2" ng-show="formVisibility" for="mujer1">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo1" id="alien1">
+                                <label class="col-2" ng-show="formVisibility" for="alien1">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Adove</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Adove</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo2" id="hombre2">
+                                <label class="col-2" ng-show="formVisibility" for="hombre2">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo2" id="mujer2">
+                                <label class="col-2" ng-show="formVisibility" for="mujer2">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo2" id="alien2">
+                                <label class="col-2" ng-show="formVisibility" for="alien2">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Quincha</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Quincha</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo3" id="hombre3">
+                                <label class="col-2" ng-show="formVisibility" for="hombre3">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo3" id="mujer3">
+                                <label class="col-2" ng-show="formVisibility" for="mujer3">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo3" id="alien3">
+                                <label class="col-2" ng-show="formVisibility" for="alien3">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Madera</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Madera</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo4" id="hombre4">
+                                <label class="col-2" ng-show="formVisibility" for="hombre4">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo4" id="mujer4">
+                                <label class="col-2" ng-show="formVisibility" for="mujer4">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="sexo4" id="alien4">
+                                <label class="col-2" ng-show="formVisibility" for="alien4">Malo</label>
+                            </div>
+                        </form>
+                    </div><br>
+                    <div class="2tipconst">
+                        <h5>2.8 MATERIAL PREDOMINANTE EN LAS PUERTAS Y VENTANAS DE PABELLONES</h5>                              
+                        <form  class="formulario">
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Madera</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Madera</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareB">
+                                <label class="col-2" ng-show="formVisibility" for="CVareB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareR">
+                                <label class="col-2" ng-show="formVisibility" for="CVareR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon" id="CVareM">
+                                <label class="col-2" ng-show="formVisibility" for="CVareM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Fierro</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Fierro</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LVareB">
+                                <label class="col-2" ng-show="formVisibility" for="LVareB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LVareR">
+                                <label class="col-2" ng-show="formVisibility" for="LVareR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon1" id="LVareM">
+                                <label class="col-2" ng-show="formVisibility" for="LVareM">Malo</label>
+                            </div>
+                            <div class="radio"  ng-controller="ControladorTareas as ctrl">
+                                <button  class="col-md-2 btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Aluminio</button>
+                                <button  class="col-2 btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Aluminio</button>
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="LVdoB">
+                                <label class="col-2" ng-show="formVisibility" for="LVdoB">Bueno</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="LVdoR">
+                                <label class="col-2" ng-show="formVisibility" for="LVdoR">Regular</label>
+
+                                <input class="col-2" ng-show="formVisibility" type="radio" name="calificaicon2" id="LVdoM">
+                                <label class="col-2" ng-show="formVisibility" for="LVdoM">Malo</label>
+                            </div>                  
+                        </form>
+                    </div><br>
+                    </form>      
+                </div>
+
+                <!-- Bootstrap JavaScript -->
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+                <script src="js/main.js"></script>
+
+                </body>
+
+                </html>

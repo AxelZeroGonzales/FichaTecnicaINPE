@@ -4,3 +4,6 @@ tr#cabecera{
 	top: 0; /* Posicionamos la cabecera pegada arriba */
 	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
 }
+buttom{
+    width: 100px;
+}

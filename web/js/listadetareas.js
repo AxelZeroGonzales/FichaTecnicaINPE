@@ -54,14 +54,6 @@ angular.module('todoAp', [])
 
                 $scope.formVisibility = false;
                 $scope.formVisibility1 = true;
-                $scope.formVisibility2 = false;
-                $scope.formVisibility3 = true;
-                $scope.formVisibility4 = false;
-                $scope.formVisibility5 = true;
-                $scope.formVisibility6 = false;
-                $scope.formVisibility7 = true;
-                $scope.formVisibility8 = false;
-                $scope.formVisibility9 = true;
 
                 $scope.ShowForm = function () {
                     $scope.formVisibility = true;
@@ -71,46 +63,6 @@ angular.module('todoAp', [])
                 $scope.Save = function () {
                     $scope.formVisibility = false;
                     $scope.formVisibility1 = true;                    
-                    console.log($scope.formVisibility)
-                }
-                $scope.ShowForm1 = function () {
-                    $scope.formVisibility2 = true;
-                    $scope.formVisibility3 = false;                    
-                    console.log($scope.formVisibility2)
-                }
-                $scope.Save1 = function () {
-                    $scope.formVisibility2 = false;
-                    $scope.formVisibility3 = true;                    
-                    console.log($scope.formVisibilit2)
-                }
-                $scope.ShowForm2 = function () {
-                    $scope.formVisibility4 = true;
-                    $scope.formVisibility5 = false;                    
-                    console.log($scope.formVisibility4)
-                }
-                $scope.Save2 = function () {
-                    $scope.formVisibility4 = false;
-                    $scope.formVisibility5 = true;                    
-                    console.log($scope.formVisibility5)
-                }
-                $scope.ShowForm3 = function () {
-                    $scope.formVisibility6 = true;
-                    $scope.formVisibility7 = false;                    
-                    console.log($scope.formVisibility)
-                }
-                $scope.Save3 = function () {
-                    $scope.formVisibility6 = false;
-                    $scope.formVisibility7 = true;                    
-                    console.log($scope.formVisibility)
-                }
-                $scope.ShowForm4 = function () {
-                    $scope.formVisibility8 = true;
-                    $scope.formVisibility9 = false;                    
-                    console.log($scope.formVisibility)
-                }
-                $scope.Save4 = function () {
-                    $scope.formVisibility8 = false;
-                    $scope.formVisibility9 = true;                    
                     console.log($scope.formVisibility)
                 }
 
