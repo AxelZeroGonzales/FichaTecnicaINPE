@@ -324,59 +324,68 @@
                         <table border="0" ng-controller="ControladorTareas as ctrl">
                             <span>{{restantes()}} {{tareas.length}}</span>
                             <thead>
-                                <tr>
-                                    <th class="col-md-2 col-form-label text-secondary" >Tipo</label</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Si</th>
-                                    <th class="col-md-2 col-form-label text-secondary">No</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Bueno</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Regular</th>
-                                    <th class="col-md-2 col-form-label text-secondary">Malo</th>
-                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Madera</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Fierro</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-2 col-form-label text-secondary">Aluminio</td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr ng-repeat="tarea in ctrl.tareas">
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="checkbox" ng-model="tarea.hecho"><span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol" value="true"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol"value="false"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input"  name="029-dorcol-est" value="1"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="2"></td>
-                                    <td class="col-md-2 col-form-label text-secondary"><input type="radio" class="form-check-input" name="029-dorcol-est" value="3"></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="texto" size="20" placeholder="Otros" ng-model="ctrl.textoNuevaTarea">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.agregarTarea()">Agregar</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-default" type="submit" ng-click="ctrl.eliminar()">Eliminar</button>
-                                    </td>
-                                </tr>
+                                    <td ><button  class="col-md-auto btn btn-default" type="submit" ng-click="ShowForm()" ng-hide="formVisibility">Madera</button></td>
+                            <div ng-show="formVisibility"  >
+                                <td ><button  class="btn btn-default" type="submit" ng-click="Save()" ng-hide="formVisibility1">Madera</button></td>
+                            </div>
+                            <td ng-show="formVisibility"  class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Bueno
+                                </label></td>
+                            <td ng-show="formVisibility" class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Regular
+                                </label></td>
+
+                            <td ng-show="formVisibility" class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Malo
+                                </label></td>
+
+                            </tr>
+                            <tr>
+                                <td ><button   class="col-md-auto btn btn-default" type="submit" ng-click="ShowForm1()" ng-hide="formVisibility2">Fierro</button></td>
+                            <div ng-show="formVisibility2"  >
+                                <td ><button  class="btn btn-default" type="submit" ng-click="Save1()" ng-hide="formVisibility3">Fierro</button></td>
+                            </div>
+                            <td ng-show="formVisibility2"  class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Bueno
+                                </label></td>
+                            <td ng-show="formVisibility2" class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Regular
+                                </label></td>
+
+                            <td ng-show="formVisibility2" class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Malo
+                                </label></td>
+
+                            </tr>
+                            <tr>
+                                <td ><button  class="btn btn-default" type="submit" ng-click="ShowForm2()" ng-hide="formVisibility4">Aluminio</button></td>
+                            <div ng-show="formVisibilit4y"  >
+                                <td ><button  class="btn btn-default" type="submit" ng-click="Save2()" ng-hide="formVisibility5">Aluminio</button></td>
+                            </div>
+                            <td ng-show="formVisibility4"  class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Bueno
+                                </label></td>
+                            <td ng-show="formVisibility4" class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Regular
+                                </label></td>
+
+                            <td ng-show="formVisibility4" class="col-md-2 col-form-label text-secondary"><label class="form-check-label col-md-5">
+                                    <input class="form-check-input" type="radio" name="01zonadatosgen" value="Urbana"> 
+                                    Malo
+                                </label></td>
+
+                            </tr>
                             </tbody>
                         </table>
                     </div><br>
