@@ -24,61 +24,51 @@
         <!-- <meta property="og:url" content="#" /> -->
         <meta property="og:image" content="img/pv.jpg" />
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
-        <%
-            LineaDAO dao = new LineaDAO();
-            List<LineaTO> lineas = dao.readAll();
-        %>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
-
+    
     <body>
 
-
+        <br>
         <div class="contenido col-md-12">
             <div class="inicio">
                 <h2>Ficha técnica situacional de los establecimientos penitenciarios</h2>
                 <hr>
             </div>
-            <form action="ListarXlinea" method="POST">
+            <form action="ListarLinea" method="POST">
                 <!--Datos encabezado-->
-                <fieldset disabled>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="oregional">Oficina Regional</label>
-                            <select name="cbolinea"  id="cbolinea">
-                                <%for (LineaTO pro : lineas) {%>
-                                <option type="sumit" value="<%=pro.getIdlinea()%>"><%=pro.getCountry_Name()%></option>
-                                <%}%>
+                            <select class="col-md-6 col-form-label text-secondary" name="cbolinea"  id="cbolinea">
+                                <option type="submit" value="1" name="txtidlinea">Lima</option>
+                                 <option type="submit" value="2" name="txtidlinea">Lima</option>
                             </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="epenitenciario">Establecimiento Penitenciario</label>
-                            <input type="text" class="form-control form-control-sm" id="epenitenciario" placeholder="[Nombre del Establecimiento Penitenciario]">
+                            <input type="submit" value="Ver Productos" />
                         </div>
                     </div>
-                </fieldset>
-                <table class="table table-bordered" id="tablaControl" >
+                <table class="table table-bordered" id="listado" >
                     <thead>
                         <tr>
-                            <th class="col-md-1 col-form-label text-secondary" >N°</label</th>
-                            <th class="col-md-2 col-form-label text-secondary">Penal</th>
-                            <th class="col-md-2 col-form-label text-secondary">Director</th>
-                            <th class="col-md-2 col-form-label text-secondary">Ultima Actualizacion</th>
-                            <th class="col-md-2 col-form-label text-secondary">Periodo</th>
-                            <th class="col-md-2 col-form-label text-secondary">Formulario</th>
-                            <th class="col-md-2 col-form-label text-secondary">PDF</th>
+                            <th class="col-form-label text-secondary" >N°</label</th>
+                            <th class=" col-form-label text-secondary">Penal</th>
+                            <th class=" col-form-label text-secondary">Director</th>
+                            <th class=" col-form-label text-secondary">Ultima Actualizacion</th>
+                            <th class=" col-form-label text-secondary">Periodo</th>
+                            <th class=" col-form-label text-secondary">Formulario</th>
+                            <th class=" col-form-label text-secondary">PDF</th>
                         </tr>
                     </thead>
                     <tbody>
                         <c:forEach var="item" items="${requestScope.listado}">                
                             <tr>
-                                <td>${item.idproducto}</td>
-                                <td>${item.descripcion}</td>
-                                <td>${item.idlinea}</td>
+                                <td>${item.idempleado}</td>
+                                <td>${item.nombre}</td>
+                                <td>${item.apellidos}</td>
                                 <td>${item.precioventa}</td>
                                 <td>${item.stock}</td>
                             </tr>

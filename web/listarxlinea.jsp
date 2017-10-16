@@ -47,7 +47,7 @@
             </table>
                 
             </form>
-        <div><a href="index.html">Regresar a Index</a></div>
+        <div><a href="Principal.html">Regresar a Index</a></div>
         </div> 
     </body>
 </html>
