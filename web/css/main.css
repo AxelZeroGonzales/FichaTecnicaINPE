@@ -13,15 +13,16 @@ body {
 }
 
 
-.framecontainer{
-  background-color: white;
-  border-radius: 4px;
-}
 
 iframe {
-  border: none;
-  padding: 12px;
-  max-width: 100%;
+
+  border-style: none;
+    position: absolute;
+	top: 100%;
+	left: 320px;
+	width: 1050px;
+        height: 1700px;
+	background: rgba(0,0,0,.0);
 }
 div#interna{
     text-align: center;
